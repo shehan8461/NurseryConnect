@@ -1,10 +1,3 @@
-//
-//  NurseryConnectApp.swift
-//  NurseryConnect
-//
-//  Created by shehan salitha on 2026-03-24.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -12,12 +5,21 @@ import SwiftData
 struct NurseryConnectApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Room.self,
+            DiaryEntry.self,
+            StaffMember.self,
+            ChildPresence.self,
+            RatioBreach.self,
         ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        let modelConfiguration = ModelConfiguration(
+            schema: schema,
+            isStoredInMemoryOnly: false
+        )
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            return try ModelContainer(
+                for: schema,
+                configurations: [modelConfiguration]
+            )
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }

@@ -14,25 +14,14 @@
 		3A5AF29A2F72152800DE004E /* Exceptions for "NurseryConnect" folder in "NurseryConnect" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Models/ChildPresence.swift,
-				Models/DiaryEntry.swift,
-				Models/RatioBreach.swift,
-				Models/Room.swift,
-				Models/StaffMember.swift,
 				ViewModels/DiaryReviewViewModel.swift,
 				ViewModels/StaffingRatioViewModel.swift,
-				Views/Components/EntryRowView.swift,
 				Views/Components/RatioCartView.swift,
 				Views/Components/StatusBadgeView.swift,
-				Views/Dashboard/HomeDashBoardView.swift,
 				Views/DiaryReview/AmendmentRequestView.swift,
 				Views/DiaryReview/CounterSignView.swift,
-				Views/DiaryReview/EntryDetailView.swift,
-				Views/DiaryReview/PendingEntriesListView.swift,
 				Views/StaffingRatio/AddChildFormView.swift,
 				Views/StaffingRatio/AddStaffFormView.swift,
-				Views/StaffingRatio/RatioBreachLogView.swift,
-				Views/StaffingRatio/RatioDashboardView.swift,
 			);
 			target = 3A5AF2632F720D2D00DE004E /* NurseryConnect */;
 		};
