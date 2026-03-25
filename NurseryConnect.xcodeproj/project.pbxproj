@@ -10,29 +10,9 @@
 		3A5AF2642F720D2D00DE004E /* NurseryConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3A5AF29A2F72152800DE004E /* Exceptions for "NurseryConnect" folder in "NurseryConnect" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				ViewModels/DiaryReviewViewModel.swift,
-				ViewModels/StaffingRatioViewModel.swift,
-				Views/Components/RatioCartView.swift,
-				Views/Components/StatusBadgeView.swift,
-				Views/DiaryReview/AmendmentRequestView.swift,
-				Views/DiaryReview/CounterSignView.swift,
-				Views/StaffingRatio/AddChildFormView.swift,
-				Views/StaffingRatio/AddStaffFormView.swift,
-			);
-			target = 3A5AF2632F720D2D00DE004E /* NurseryConnect */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3A5AF2662F720D2D00DE004E /* NurseryConnect */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3A5AF29A2F72152800DE004E /* Exceptions for "NurseryConnect" folder in "NurseryConnect" target */,
-			);
 			path = NurseryConnect;
 			sourceTree = "<group>";
 		};
