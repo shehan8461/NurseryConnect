@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3A8F335F2F7A6B1B00967B01 /* EntryDetailView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F335E2F7A6B1B00967B01 /* EntryDetailView.txt */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3A5AF2642F720D2D00DE004E /* NurseryConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8F335E2F7A6B1B00967B01 /* EntryDetailView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = EntryDetailView.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -34,6 +39,7 @@
 			children = (
 				3A5AF2662F720D2D00DE004E /* NurseryConnect */,
 				3A5AF2652F720D2D00DE004E /* Products */,
+				3A8F335E2F7A6B1B00967B01 /* EntryDetailView.txt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +115,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8F335F2F7A6B1B00967B01 /* EntryDetailView.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
