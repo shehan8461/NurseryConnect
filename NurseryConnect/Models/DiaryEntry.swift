@@ -46,13 +46,23 @@ class DiaryEntry {
     var id: UUID
     var childFirstName: String       // GDPR: first name only
     var keyworkerName: String
-    var entryType: EntryType
+    var entryTypeRaw: String
     var entryDescription: String
     var submittedAt: Date
-    var status: ReviewStatus
+    var statusRaw: String
     var countersignedAt: Date?
     var amendmentNote: String?
-    
+
+    var entryType: EntryType {
+        get { EntryType(rawValue: entryTypeRaw) ?? .activity }
+        set { entryTypeRaw = newValue.rawValue }
+    }
+
+    var status: ReviewStatus {
+        get { ReviewStatus(rawValue: statusRaw) ?? .pending }
+        set { statusRaw = newValue.rawValue }
+    }
+
     init(
         id: UUID = UUID(),
         childFirstName: String,
@@ -67,10 +77,10 @@ class DiaryEntry {
         self.id               = id
         self.childFirstName   = childFirstName
         self.keyworkerName    = keyworkerName
-        self.entryType        = entryType
+        self.entryTypeRaw     = entryType.rawValue
         self.entryDescription = entryDescription
         self.submittedAt      = submittedAt
-        self.status           = status
+        self.statusRaw        = status.rawValue
         self.countersignedAt  = countersignedAt
         self.amendmentNote    = amendmentNote
     }
