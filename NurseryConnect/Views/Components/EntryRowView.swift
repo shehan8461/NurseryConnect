@@ -1,17 +1,14 @@
-//
-//  EntryRowView.swift
-//  NurseryConnect
-//
-//  Created by shehan salitha on 2026-03-30.
-//
-
 import SwiftUI
 
 struct EntryRowView: View {
     let entry: DiaryEntry
     
     var statusColor: Color {
-        Color(hex: entry.status.colorHex)
+        switch entry.status {
+        case .pending:            return .appWarning
+        case .countersigned:      return .appSuccess
+        case .amendmentRequested: return .appDanger
+        }
     }
     
     var body: some View {
