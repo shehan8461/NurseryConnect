@@ -93,6 +93,10 @@ struct AmendmentRequestView: View {
                                 .foregroundColor(.secondary)
                         }
                         .padding()
+                        .transition(.asymmetric(
+                            insertion: .scale(scale: 0.8).combined(with: .opacity),
+                            removal: .opacity
+                        ))
                     }
                     
                     Spacer(minLength: 20)
@@ -242,15 +246,15 @@ struct AmendmentRequestView: View {
         entry.amendmentNote = amendmentNote
             .trimmingCharacters(in: .whitespacesAndNewlines)
         try? modelContext.save()
-        
-        withAnimation {
+
+        withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) {
             isSubmitted = true
         }
-        
-        DispatchQueue.main.asyncAfter(
-            deadline: .now() + 1.5
-        ) {
-            dismiss()
+
+        // Structured concurrency: replaces DispatchQueue.main.asyncAfter
+        Task {
+            try? await Task.sleep(for: .seconds(1.5))
+            await MainActor.run { dismiss() }
         }
     }
 }

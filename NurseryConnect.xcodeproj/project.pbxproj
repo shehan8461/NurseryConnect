@@ -12,6 +12,7 @@
 
 /* Begin PBXFileReference section */
 		3A5AF2642F720D2D00DE004E /* NurseryConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A5AF2742F720D2D00DE004E /* NurseryConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseryConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8F335E2F7A6B1B00967B01 /* EntryDetailView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = EntryDetailView.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -21,10 +22,22 @@
 			path = NurseryConnect;
 			sourceTree = "<group>";
 		};
+		3A5AF2752F720D2D00DE004E /* NurseryConnectTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NurseryConnectTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3A5AF2612F720D2D00DE004E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A5AF2782F720D2D00DE004E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				3A5AF2662F720D2D00DE004E /* NurseryConnect */,
+				3A5AF2752F720D2D00DE004E /* NurseryConnectTests */,
 				3A5AF2652F720D2D00DE004E /* Products */,
 				3A8F335E2F7A6B1B00967B01 /* EntryDetailView.txt */,
 			);
@@ -47,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				3A5AF2642F720D2D00DE004E /* NurseryConnect.app */,
+				3A5AF2742F720D2D00DE004E /* NurseryConnectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +90,28 @@
 			productName = NurseryConnect;
 			productReference = 3A5AF2642F720D2D00DE004E /* NurseryConnect.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3A5AF2762F720D2D00DE004E /* NurseryConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A5AF27D2F720D2D00DE004E /* Build configuration list for PBXNativeTarget "NurseryConnectTests" */;
+			buildPhases = (
+				3A5AF2772F720D2D00DE004E /* Sources */,
+				3A5AF2782F720D2D00DE004E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A5AF27A2F720D2D00DE004E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3A5AF2752F720D2D00DE004E /* NurseryConnectTests */,
+			);
+			name = NurseryConnectTests;
+			packageProductDependencies = (
+			);
+			productName = NurseryConnectTests;
+			productReference = 3A5AF2742F720D2D00DE004E /* NurseryConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -106,6 +143,7 @@
 			projectRoot = "";
 			targets = (
 				3A5AF2632F720D2D00DE004E /* NurseryConnect */,
+				3A5AF2762F720D2D00DE004E /* NurseryConnectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -121,8 +159,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXContainerItemProxy section */
+		3A5AF2792F720D2D00DE004E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A5AF25C2F720D2D00DE004E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A5AF2632F720D2D00DE004E;
+			remoteInfo = NurseryConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		3A5AF27A2F720D2D00DE004E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A5AF2632F720D2D00DE004E /* NurseryConnect */;
+			targetProxy = 3A5AF2792F720D2D00DE004E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A5AF2602F720D2D00DE004E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A5AF2772F720D2D00DE004E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,6 +376,58 @@
 			};
 			name = Release;
 		};
+		3A5AF27B2F720D2D00DE004E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shehan.NurseryConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseryConnect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NurseryConnect";
+			};
+			name = Debug;
+		};
+		3A5AF27C2F720D2D00DE004E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shehan.NurseryConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseryConnect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NurseryConnect";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -330,6 +445,15 @@
 			buildConfigurations = (
 				3A5AF2722F720D2D00DE004E /* Debug */,
 				3A5AF2732F720D2D00DE004E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A5AF27D2F720D2D00DE004E /* Build configuration list for PBXNativeTarget "NurseryConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A5AF27B2F720D2D00DE004E /* Debug */,
+				3A5AF27C2F720D2D00DE004E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

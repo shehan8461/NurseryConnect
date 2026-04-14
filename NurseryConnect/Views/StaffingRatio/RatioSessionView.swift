@@ -14,30 +14,20 @@ struct RatioSessionView: View {
     @State private var showSaveConfirmation: Bool = false
     @State private var isSaved: Bool = false
     
-    // Computed ratio values
-    var maxAllowedChildren: Int {
-        staffCount * selectedAgeGroup.requiredRatio
+    // MARK: - Ratio Logic (delegated to RatioCalculator for testability)
+    var calculator: RatioCalculator {
+        RatioCalculator(
+            staffCount: staffCount,
+            childCount: childCount,
+            ageGroup: selectedAgeGroup
+        )
     }
-    
-    var isBreached: Bool {
-        guard staffCount > 0 else { return childCount > 0 }
-        return childCount > maxAllowedChildren
-    }
-    
-    var isBorderline: Bool {
-        guard !isBreached else { return false }
-        return (maxAllowedChildren - childCount) <= 2
-    }
-    
-    var ratioStatus: RatioStatus {
-        if isBreached   { return .breached }
-        if isBorderline { return .borderline }
-        return .compliant
-    }
-    
-    var statusColor: Color {
-        ratioStatus.color
-    }
+
+    var maxAllowedChildren: Int { calculator.maxAllowedChildren }
+    var isBreached: Bool        { calculator.isBreached }
+    var isBorderline: Bool      { calculator.isBorderline }
+    var ratioStatus: RatioStatus { calculator.status }
+    var statusColor: Color       { ratioStatus.color }
     
     var body: some View {
         ZStack {
@@ -283,7 +273,9 @@ struct RatioSessionView: View {
                 // Minus Button
                 Button {
                     if count.wrappedValue > minimum {
-                        count.wrappedValue -= 1
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                            count.wrappedValue -= 1
+                        }
                     }
                 } label: {
                     Image(systemName: "minus.circle.fill")
@@ -304,14 +296,17 @@ struct RatioSessionView: View {
                         design: .rounded
                     ))
                     .foregroundColor(color)
-                    .animation(.easeInOut, value: count.wrappedValue)
+                    .contentTransition(.numericText())
+                    .animation(.spring(response: 0.4, dampingFraction: 0.7), value: count.wrappedValue)
                 
                 Spacer()
                 
                 // Plus Button
                 Button {
                     if count.wrappedValue < maximum {
-                        count.wrappedValue += 1
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                            count.wrappedValue += 1
+                        }
                     }
                 } label: {
                     Image(systemName: "plus.circle.fill")
@@ -411,6 +406,10 @@ struct RatioSessionView: View {
                 .foregroundColor(.secondary)
         }
         .padding()
+        .transition(.asymmetric(
+            insertion: .scale(scale: 0.8).combined(with: .opacity),
+            removal: .opacity
+        ))
     }
     
     // MARK: - Save Action
