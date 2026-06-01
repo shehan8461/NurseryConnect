@@ -18,9 +18,34 @@ class SampleData {
             DiaryEntry(
                 childFirstName: "Oliver",
                 keyworkerName: "Sarah Johnson",
-                entryType: .activity,
+                entryType: .meal,
                 entryDescription: "Oliver joined outdoor play and showed great enthusiasm in the sandbox activity. Strong peer interaction observed throughout the session. Linked to EYFS: Physical Development — Moving and Handling.",
                 submittedAt: Date().addingTimeInterval(-3600),
+                status: .pending
+            ),
+            DiaryEntry(
+                childFirstName: "Noah",
+                keyworkerName: "Sarah Johnson",
+                entryType: .meal,
+                entryDescription: "Oliver joined outdoor play and showed great enthusiasm in the sandbox activity. Strong peer interaction observed throughout the session. Linked to EYFS: Physical Development — Moving and Handling.",
+                submittedAt: Date().addingTimeInterval(-3600),
+                status: .pending
+            ),
+            DiaryEntry(
+                childFirstName: "Amelia",
+                keyworkerName: "Emma Wilson",
+                entryType: .meal,
+                entryDescription: "Oliver joined outdoor play and showed great enthusiasm in the sandbox activity. Strong peer interaction observed throughout the session. Linked to EYFS: Physical Development — Moving and Handling.",
+                submittedAt: Date().addingTimeInterval(-3600),
+                status: .pending
+            ),
+
+               DiaryEntry(
+                childFirstName: "Oliver",
+                keyworkerName: "Sarah Johnson",
+                entryType: .meal,
+                entryDescription: "Oliver joined outdoor play and showed great enthusiasm in the sandbox activity. Strong peer interaction observed throughout the session. Linked to EYFS: Physical Development — Moving and Handling.",
+                submittedAt: Date().addingTimeInterval(-300),
                 status: .pending
             ),
             DiaryEntry(
@@ -106,6 +131,15 @@ class SampleData {
             
             // Today - compliant
             RatioSession(
+                roomName: "Sunshine Room",
+                ageGroup: .twoYear,
+                staffCount: 2,
+                childCount: 6,
+                sessionDate: Date(),
+                notes: "Normal morning session. All staff present."
+            ),
+            
+                 RatioSession(
                 roomName: "Sunshine Room",
                 ageGroup: .twoYear,
                 staffCount: 2,
