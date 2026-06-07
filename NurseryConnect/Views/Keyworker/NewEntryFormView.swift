@@ -4,6 +4,8 @@ import SwiftData
 struct NewEntryFormView: View {
 
     @Environment(\.modelContext) private var modelContext
+    @Query private var allEntries: [DiaryEntry]
+    @Query(sort: \RatioSession.sessionDate, order: .reverse) private var sessions: [RatioSession]
 
     // In a real app this comes from an authenticated session.
     private let keyworkerName = "Sarah Johnson"
@@ -260,6 +262,16 @@ struct NewEntryFormView: View {
             status: .pending
         )
         modelContext.insert(entry)
+
+        // Push fresh data to Apple Watch — pending count just increased by 1
+        let latestSession = sessions.first
+        WatchConnectivityManager.shared.sendUpdate(
+            pendingCount: allEntries.filter { $0.status == .pending }.count + 1,
+            ratioStatus:  latestSession?.ratioStatus ?? .compliant,
+            childCount:   latestSession?.childCount  ?? 0,
+            staffCount:   latestSession?.staffCount  ?? 0
+        )
+
         withAnimation(.spring(response: 0.4)) { isSaved = true }
     }
 

@@ -6,6 +6,9 @@ struct NurseryConnectApp: App {
     let container: ModelContainer
 
     init() {
+        // Start WCSession activation immediately at launch so it's ready before ContentView appears
+        _ = WatchConnectivityManager.shared
+
         let schema = Schema([DiaryEntry.self, RatioSession.self])
         do {
             container = try ModelContainer(for: schema)

@@ -7,23 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1677FE44962F8CC560F649 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B04C595D7B1FD1DBF701BE0 /* Foundation.framework */; };
+		2B245F1E1591D2CF2C15CEEF /* NurseryConnectWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE624D79A4ACF6287874C36 /* NurseryConnectWatchApp.swift */; };
 		3A8F335F2F7A6B1B00967B01 /* EntryDetailView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F335E2F7A6B1B00967B01 /* EntryDetailView.txt */; };
+		4A49872269F2CAE196EB6449 /* WatchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80BBAEFE6A4443DE06A2E47 /* WatchDataStore.swift */; };
+		6DAD6281D2BE8C703F8DDD68 /* RatioStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16E238EE367FEDF45E9A607 /* RatioStatusView.swift */; };
+		9F3A08B4C2D14B1EA6C21E33 /* NurseryConnectWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AFC5AEEF74B2BC00BF11609 /* NurseryConnectWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C4402937E33B581E77EBF6C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A32A232FA7B0DE42AF4E4A /* ContentView.swift */; };
+		E4D6C4F78A15FF7F3114A29D /* PendingAlertsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3376900FCAA135CFA8EA4F4 /* PendingAlertsView.swift */; };
+		F7E759AE124D3CEFAC4E1FEB /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469848DA69BF7E4E1CBC47E7 /* WatchConnectivity.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3A5AF2792F720D2D00DE004E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A5AF25C2F720D2D00DE004E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A5AF2632F720D2D00DE004E;
+			remoteInfo = NurseryConnect;
+		};
+		9F3A08B5C2D14B1EA6C21E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A5AF25C2F720D2D00DE004E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9F3B057E61B2789466BD0F7;
+			remoteInfo = NurseryConnectWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F3A08B7C2D14B1EA6C21E33 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9F3A08B4C2D14B1EA6C21E33 /* NurseryConnectWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2B04C595D7B1FD1DBF701BE0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS11.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		36BDB829C7B962073AA9F797 /* NurseryConnectWatchApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NurseryConnectWatchApp.swift; sourceTree = "<group>"; };
 		3A5AF2642F720D2D00DE004E /* NurseryConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5AF2742F720D2D00DE004E /* NurseryConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseryConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8F335E2F7A6B1B00967B01 /* EntryDetailView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = EntryDetailView.txt; sourceTree = "<group>"; };
+		432426D1F7C0D24B7F99D058 /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		469848DA69BF7E4E1CBC47E7 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		689DC9B160842DA82CF2A5CF /* RatioStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RatioStatusView.swift; sourceTree = "<group>"; };
+		7DC6394FFCED1E7605697F64 /* PendingAlertsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PendingAlertsView.swift; sourceTree = "<group>"; };
+		84A32A232FA7B0DE42AF4E4A /* ContentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8AFC5AEEF74B2BC00BF11609 /* NurseryConnectWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnectWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A31599F7E8BA7DA7E5B4A8D4 /* NurseryConnectWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseryConnectWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE624D79A4ACF6287874C36 /* NurseryConnectWatchApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NurseryConnectWatchApp.swift; sourceTree = "<group>"; };
+		B3376900FCAA135CFA8EA4F4 /* PendingAlertsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PendingAlertsView.swift; sourceTree = "<group>"; };
+		B78FA1EEB4A7D1957A107C96 /* WatchDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WatchDataStore.swift; sourceTree = "<group>"; };
+		C16E238EE367FEDF45E9A607 /* RatioStatusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RatioStatusView.swift; sourceTree = "<group>"; };
+		D80BBAEFE6A4443DE06A2E47 /* WatchDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WatchDataStore.swift; sourceTree = "<group>"; };
+		E6F71D7F7C0D2210C42F6043 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3A5AF2662F720D2D00DE004E /* NurseryConnect */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = NurseryConnect;
 			sourceTree = "<group>";
 		};
 		3A5AF2752F720D2D00DE004E /* NurseryConnectTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = NurseryConnectTests;
 			sourceTree = "<group>";
 		};
@@ -44,9 +102,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5E2317E134CE82971D848901 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F1677FE44962F8CC560F649 /* Foundation.framework in Frameworks */,
+				F7E759AE124D3CEFAC4E1FEB /* WatchConnectivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1AE83A7145C1295536622C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75186CD50E9FFD97DC592DF8 /* watchOS */,
+				E6F71D7F7C0D2210C42F6043 /* WatchConnectivity.framework */,
+				469848DA69BF7E4E1CBC47E7 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		218174D8C9196EF5B17F1493 /* NurseryConnectWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				689DC9B160842DA82CF2A5CF /* RatioStatusView.swift */,
+				36BDB829C7B962073AA9F797 /* NurseryConnectWatchApp.swift */,
+				B78FA1EEB4A7D1957A107C96 /* WatchDataStore.swift */,
+				7DC6394FFCED1E7605697F64 /* PendingAlertsView.swift */,
+				432426D1F7C0D24B7F99D058 /* ContentView.swift */,
+			);
+			name = "NurseryConnectWatch Watch App";
+			path = "NurseryConnectWatch Watch App";
+			sourceTree = "<group>";
+		};
 		3A5AF25B2F720D2D00DE004E = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +144,9 @@
 				3A5AF2752F720D2D00DE004E /* NurseryConnectTests */,
 				3A5AF2652F720D2D00DE004E /* Products */,
 				3A8F335E2F7A6B1B00967B01 /* EntryDetailView.txt */,
+				1A1AE83A7145C1295536622C /* Frameworks */,
+				218174D8C9196EF5B17F1493 /* NurseryConnectWatch Watch App */,
+				67931F96025365BEF2A88FCE /* NurseryConnectWatch Watch App */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,8 +155,31 @@
 			children = (
 				3A5AF2642F720D2D00DE004E /* NurseryConnect.app */,
 				3A5AF2742F720D2D00DE004E /* NurseryConnectTests.xctest */,
+				A31599F7E8BA7DA7E5B4A8D4 /* NurseryConnectWatch.app */,
+				8AFC5AEEF74B2BC00BF11609 /* NurseryConnectWatch.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		67931F96025365BEF2A88FCE /* NurseryConnectWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				C16E238EE367FEDF45E9A607 /* RatioStatusView.swift */,
+				ADE624D79A4ACF6287874C36 /* NurseryConnectWatchApp.swift */,
+				D80BBAEFE6A4443DE06A2E47 /* WatchDataStore.swift */,
+				B3376900FCAA135CFA8EA4F4 /* PendingAlertsView.swift */,
+				84A32A232FA7B0DE42AF4E4A /* ContentView.swift */,
+			);
+			name = "NurseryConnectWatch Watch App";
+			path = "NurseryConnectWatch Watch App";
+			sourceTree = "<group>";
+		};
+		75186CD50E9FFD97DC592DF8 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				2B04C595D7B1FD1DBF701BE0 /* Foundation.framework */,
+			);
+			name = watchOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -76,17 +192,17 @@
 				3A5AF2602F720D2D00DE004E /* Sources */,
 				3A5AF2612F720D2D00DE004E /* Frameworks */,
 				3A5AF2622F720D2D00DE004E /* Resources */,
+				9F3A08B7C2D14B1EA6C21E33 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9F3A08B6C2D14B1EA6C21E33 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				3A5AF2662F720D2D00DE004E /* NurseryConnect */,
 			);
 			name = NurseryConnect;
-			packageProductDependencies = (
-			);
 			productName = NurseryConnect;
 			productReference = 3A5AF2642F720D2D00DE004E /* NurseryConnect.app */;
 			productType = "com.apple.product-type.application";
@@ -107,11 +223,26 @@
 				3A5AF2752F720D2D00DE004E /* NurseryConnectTests */,
 			);
 			name = NurseryConnectTests;
-			packageProductDependencies = (
-			);
 			productName = NurseryConnectTests;
 			productReference = 3A5AF2742F720D2D00DE004E /* NurseryConnectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D9F3B057E61B2789466BD0F7 /* NurseryConnectWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9C7C57C8646B0311DC88251 /* Build configuration list for PBXNativeTarget "NurseryConnectWatch" */;
+			buildPhases = (
+				09649C4E1FFD681BE3817995 /* Sources */,
+				5E2317E134CE82971D848901 /* Frameworks */,
+				093331AD50B1F3E9980667D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NurseryConnectWatch;
+			productName = NurseryConnectWatch;
+			productReference = 8AFC5AEEF74B2BC00BF11609 /* NurseryConnectWatch.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -144,11 +275,19 @@
 			targets = (
 				3A5AF2632F720D2D00DE004E /* NurseryConnect */,
 				3A5AF2762F720D2D00DE004E /* NurseryConnectTests */,
+				D9F3B057E61B2789466BD0F7 /* NurseryConnectWatch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		093331AD50B1F3E9980667D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A5AF2622F720D2D00DE004E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,25 +298,19 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXContainerItemProxy section */
-		3A5AF2792F720D2D00DE004E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A5AF25C2F720D2D00DE004E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A5AF2632F720D2D00DE004E;
-			remoteInfo = NurseryConnect;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXTargetDependency section */
-		3A5AF27A2F720D2D00DE004E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A5AF2632F720D2D00DE004E /* NurseryConnect */;
-			targetProxy = 3A5AF2792F720D2D00DE004E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXSourcesBuildPhase section */
+		09649C4E1FFD681BE3817995 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DAD6281D2BE8C703F8DDD68 /* RatioStatusView.swift in Sources */,
+				2B245F1E1591D2CF2C15CEEF /* NurseryConnectWatchApp.swift in Sources */,
+				4A49872269F2CAE196EB6449 /* WatchDataStore.swift in Sources */,
+				E4D6C4F78A15FF7F3114A29D /* PendingAlertsView.swift in Sources */,
+				C4402937E33B581E77EBF6C1 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A5AF2602F720D2D00DE004E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +326,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A5AF27A2F720D2D00DE004E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A5AF2632F720D2D00DE004E /* NurseryConnect */;
+			targetProxy = 3A5AF2792F720D2D00DE004E /* PBXContainerItemProxy */;
+		};
+		9F3A08B6C2D14B1EA6C21E33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9F3B057E61B2789466BD0F7 /* NurseryConnectWatch */;
+			targetProxy = 9F3A08B5C2D14B1EA6C21E33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3A5AF26F2F720D2D00DE004E /* Debug */ = {
@@ -428,6 +574,57 @@
 			};
 			name = Release;
 		};
+		57762BBCC1E7A9AEA55C4A67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NurseryConnect;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.shehan.NurseryConnect;
+				INFOPLIST_KEY_WKWatchOnly = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shehan.NurseryConnect.watchkitapp;
+				PRODUCT_NAME = NurseryConnectWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		CB9D586F76FCD85242669B13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NurseryConnect;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.shehan.NurseryConnect;
+				INFOPLIST_KEY_WKWatchOnly = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.shehan.NurseryConnect.watchkitapp;
+				PRODUCT_NAME = NurseryConnectWatch;
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -454,6 +651,15 @@
 			buildConfigurations = (
 				3A5AF27B2F720D2D00DE004E /* Debug */,
 				3A5AF27C2F720D2D00DE004E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9C7C57C8646B0311DC88251 /* Build configuration list for PBXNativeTarget "NurseryConnectWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57762BBCC1E7A9AEA55C4A67 /* Release */,
+				CB9D586F76FCD85242669B13 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

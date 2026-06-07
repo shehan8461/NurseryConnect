@@ -6,6 +6,7 @@ struct RatioSessionView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Query private var sessions: [RatioSession]
+    @Query private var entries: [DiaryEntry]
     
     @State private var staffCount: Int = 2
     @State private var childCount: Int = 6
@@ -424,7 +425,15 @@ struct RatioSessionView: View {
         )
         modelContext.insert(session)
         try? modelContext.save()
-        
+
+        // Push fresh data to Apple Watch immediately after saving
+        WatchConnectivityManager.shared.sendUpdate(
+            pendingCount: entries.filter { $0.status == .pending }.count,
+            ratioStatus:  session.ratioStatus,
+            childCount:   session.childCount,
+            staffCount:   session.staffCount
+        )
+
         withAnimation {
             isSaved = true
         }

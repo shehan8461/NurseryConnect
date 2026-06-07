@@ -25,6 +25,7 @@ struct ContentView: View {
         .onAppear {
             if !SampleData.hasExistingData(context: modelContext) {
                 SampleData.insertSampleData(context: modelContext)
+                try? modelContext.save()
             }
             sendWatchUpdate()
         }
@@ -33,11 +34,23 @@ struct ContentView: View {
     }
 
     private func sendWatchUpdate() {
+        let currentEntries = (try? modelContext.fetch(FetchDescriptor<DiaryEntry>())) ?? entries
+        let currentSessions = (
+            try? modelContext.fetch(
+                FetchDescriptor<RatioSession>(
+                    sortBy: [SortDescriptor(\.sessionDate, order: .reverse)]
+                )
+            )
+        ) ?? sessions
+
+        let currentPendingCount = currentEntries.filter { $0.status == .pending }.count
+        let currentLatestSession = currentSessions.first
+
         WatchConnectivityManager.shared.sendUpdate(
-            pendingCount: pendingCount,
-            ratioStatus:  latestSession?.ratioStatus ?? .compliant,
-            childCount:   latestSession?.childCount  ?? 0,
-            staffCount:   latestSession?.staffCount  ?? 0
+            pendingCount: currentPendingCount,
+            ratioStatus:  currentLatestSession?.ratioStatus ?? .compliant,
+            childCount:   currentLatestSession?.childCount  ?? 0,
+            staffCount:   currentLatestSession?.staffCount  ?? 0
         )
     }
 }

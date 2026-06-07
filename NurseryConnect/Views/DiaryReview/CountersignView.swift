@@ -6,6 +6,8 @@ struct CountersignView: View {
     
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+    @Query private var allEntries: [DiaryEntry]
+    @Query(sort: \RatioSession.sessionDate, order: .reverse) private var sessions: [RatioSession]
     @State private var showConfirmation: Bool = false
     @State private var isCountersigned: Bool = false
     
@@ -211,6 +213,16 @@ struct CountersignView: View {
         entry.status = .countersigned
         entry.countersignedAt = Date()
         try? modelContext.save()
+
+        // Push fresh data to Apple Watch — pending count just decreased by 1
+        let latestSession = sessions.first
+        let newPending = max(0, allEntries.filter { $0.status == .pending }.count - 1)
+        WatchConnectivityManager.shared.sendUpdate(
+            pendingCount: newPending,
+            ratioStatus:  latestSession?.ratioStatus ?? .compliant,
+            childCount:   latestSession?.childCount  ?? 0,
+            staffCount:   latestSession?.staffCount  ?? 0
+        )
 
         withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) {
             isCountersigned = true
